@@ -17,6 +17,9 @@ class Block{
         rotate(angle);
         rectMode(CENTER);
         rect(0, 0, this.width, this.height);
+        World.remove(world, this.body);
+        this.visibility = this.visibility - 1;
+        tint(255, this.visibility);
         pop();
       }
 }
